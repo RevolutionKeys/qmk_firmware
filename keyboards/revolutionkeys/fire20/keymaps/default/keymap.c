@@ -245,6 +245,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 
 }
 #ifdef OLED_DRIVER_ENABLE
+oled_rotation_t oled_init_user(oled_rotation_t rotation){
+return  OLED_ROTATION_90; 
+};
 void oled_task_user(void) {
     // Host Keyboard Layer Status
     oled_write_P(PSTR("LAY\n"), false);
